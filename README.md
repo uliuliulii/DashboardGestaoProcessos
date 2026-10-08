@@ -19,32 +19,32 @@ A aplicação foi criada para demonstrar conhecimentos comuns em vagas de Desenv
 
 ### Dashboard
 Exibe:
-- processos em andamento;
-- processos concluídos;
-- tarefas em atraso;
-- itens não conformes.
+- Processos em andamento;
+- Processos concluídos;
+- Tarefas em atraso;
+- Itens não conformes.
 
 ### Processos
 Permite:
-- cadastrar processos;
-- definir responsável;
-- definir status;
-- listar processos;
-- remover processos.
+- Cadastrar processos;
+- Definir responsável;
+- Definir status;
+- Listar processos;
+- Remover processos.
 
 ### Tarefas
 Permite:
-- vincular tarefas a processos;
-- definir prazo;
-- acompanhar status;
-- concluir tarefas.
+- Vincular tarefas a processos;
+- Definir prazo;
+- Acompanhar status;
+- Concluir tarefas.
 
 ### Conformidade
 Permite:
-- criar itens de checklist vinculados a processos;
-- marcar um item como conforme;
-- marcar um item como não conforme;
-- registrar observações.
+- Criar itens de checklist vinculados a processos;
+- Marcar um item como conforme;
+- Marcar um item como não conforme;
+- Registrar observações.
 
 ---
 
@@ -123,7 +123,7 @@ git --version
 
 # Como rodar o projeto
 
-Você usará **3 terminais**: um para banco, um para backend e um para frontend.
+Você usará **3 terminais**: um para o banco de dados, um para backend e um para frontend.
 
 ## 1. Banco de dados
 
@@ -333,75 +333,6 @@ Ao excluir um processo, seus registros dependentes também são removidos por `O
 
 ---
 
-# Validação e qualidade
-
-O backend utiliza validações do Symfony, como:
-
-```php
-#[Assert\NotBlank]
-#[Assert\Length(min: 3, max: 150)]
-```
-
-Respostas inválidas retornam HTTP `422`.
-
-Há testes com PHPUnit no backend e Vitest/Testing Library no frontend.
-
----
-
-# Desenvolvimento assistido por IA
-
-Ferramentas de IA generativa podem ser usadas como apoio para:
-
-- revisão de código;
-- estudo de documentação;
-- investigação de erros;
-- criação e revisão de testes;
-- sugestões de refatoração;
-- documentação técnica.
-
-A validação final do comportamento e das decisões técnicas permanece sob responsabilidade da pessoa desenvolvedora.
-
----
-
-# Fluxo Git sugerido
-
-Branches:
-
-```text
-main
-feature/processos
-feature/tarefas
-feature/conformidades
-feature/dashboard
-```
-
-Commits:
-
-```text
-feat: implement process management
-feat: add compliance checklist
-test: add process entity tests
-fix: validate compliance status
-docs: improve setup instructions
-```
-
----
-
-# Próximas evoluções
-
-- autenticação com JWT;
-- perfis de acesso;
-- upload de evidências;
-- histórico de auditoria;
-- paginação;
-- filtros e busca;
-- cobertura maior de testes;
-- GitHub Actions;
-- Docker do backend e frontend;
-- relatórios.
-
----
-
 # Autor
 
-Projeto desenvolvido para estudo e portfólio em desenvolvimento Full Stack com PHP e React.
+Projeto desenvolvido para estudo e portfólio em desenvolvimento Full-Stack com PHP e React.

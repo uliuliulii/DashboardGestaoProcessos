@@ -1,0 +1,15 @@
+backend/vendor/
+backend/.env.local
+backend/var/
+backend/.phpunit.cache/
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/tsconfig.tsbuildinfo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+backend/.phpunit.result.cache
+frontend/tsconfig.tsbuildinfo
+backend/.env

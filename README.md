@@ -48,6 +48,34 @@ Permite:
 
 ---
 
+## Screenshots
+
+### Dashboard
+
+Visão geral do sistema com indicadores e gráficos de processos, tarefas e conformidades.
+
+![Dashboard](docs/dashboard.png)
+
+### Gestão de Processos
+
+Cadastro e acompanhamento dos processos, responsáveis e status.
+
+![Gestão de Processos](docs/processos.png)
+
+### Gestão de Tarefas
+
+Controle de tarefas vinculadas aos processos, com prazos e fluxo de status entre pendente, em andamento e concluída.
+
+![Gestão de Tarefas](docs/tarefas.png)
+
+### Controle de Conformidades
+
+Checklist de conformidade com status, observações e ações para atualização dos itens.
+
+![Controle de Conformidades](docs/conformidades.png)
+
+---
+
 # Stack
 
 ## Backend

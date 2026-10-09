@@ -30,4 +30,19 @@ export type Dashboard = {
   processosConcluidos: number
   tarefasEmAtraso: number
   naoConformidades: number
+  processosPorStatus: {
+    planejados: number
+    emAndamento: number
+    concluidos: number
+  }
+  conformidadesPorStatus: {
+    pendentes: number
+    conformes: number
+    naoConformes: number
+  }
+  tarefasPorStatus: {
+    pendentes: number
+    emAndamento: number
+    concluidas: number
+  }
 }

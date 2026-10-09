@@ -20,9 +20,10 @@ class DashboardController extends ApiController
 
         $tarefasEmAtraso = array_filter(
             $tarefas->findAll(),
-            fn ($t) => $t->getPrazo()
-                && $t->getPrazo() < $hoje
-                && $t->getStatus() !== 'CONCLUIDA'
+            fn ($tarefa) =>
+                $tarefa->getPrazo()
+                && $tarefa->getPrazo() < $hoje
+                && $tarefa->getStatus() !== 'CONCLUIDA'
         );
 
         return $this->json([
@@ -30,6 +31,21 @@ class DashboardController extends ApiController
             'processosConcluidos' => $processos->count(['status' => 'CONCLUIDO']),
             'tarefasEmAtraso' => count($tarefasEmAtraso),
             'naoConformidades' => $conformidades->count(['status' => 'NAO_CONFORME']),
+            'processosPorStatus' => [
+                'planejados' => $processos->count(['status' => 'PLANEJADO']),
+                'emAndamento' => $processos->count(['status' => 'EM_ANDAMENTO']),
+                'concluidos' => $processos->count(['status' => 'CONCLUIDO']),
+            ],
+            'conformidadesPorStatus' => [
+                'pendentes' => $conformidades->count(['status' => 'PENDENTE']),
+                'conformes' => $conformidades->count(['status' => 'CONFORME']),
+                'naoConformes' => $conformidades->count(['status' => 'NAO_CONFORME']),
+            ],
+            'tarefasPorStatus' => [
+                'pendentes' => $tarefas->count(['status' => 'PENDENTE']),
+                'emAndamento' => $tarefas->count(['status' => 'EM_ANDAMENTO']),
+                'concluidas' => $tarefas->count(['status' => 'CONCLUIDA']),
+            ],
         ]);
     }
 }

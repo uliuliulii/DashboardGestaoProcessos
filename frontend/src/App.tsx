@@ -9,8 +9,8 @@ export default function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div>
-          <span className="eyebrow">PORTFÓLIO FULL STACK</span>
-          <h1>Flow Compliance</h1>
+          <span className="eyebrow">PROJETO PORTFÓLIO</span>
+          <h1>Painel de Gestão de Processos</h1>
         </div>
 
         <nav>
@@ -20,7 +20,11 @@ export default function App() {
           <NavLink to="/conformidades">Conformidades</NavLink>
         </nav>
 
-        <small>PHP • Symfony • React • PostgreSQL</small>
+        <div className="sidebar-stack">
+          <span>Stack utilizada</span>
+          <small>PHP • Symfony • React • PostgreSQL</small>
+        </div>
+
       </aside>
 
       <main className="content">
